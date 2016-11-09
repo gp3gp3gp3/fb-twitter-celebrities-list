@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
-import logo from './logo.svg';
+import logo from './logo.svg'
 import Celebrity from './Celebrity'
-import './App.css';
+import './App.css'
 
 class App extends Component {
   constructor () {
@@ -11,19 +11,23 @@ class App extends Component {
       celebrities: null
     }
   }
+
   componentWillMount () {
     this.fetchUsers()
   }
 
   fetchUsers () {
-    const ROOT_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:4567' : 'http://sinatra-oauth-backend.herokuapp.com'
+    const ROOT_URL = process.env.NODE_ENV === 'development'
+    ? 'http://localhost:4567'
+    : 'http://sinatra-oauth-backend.herokuapp.com'
+
     axios.get(ROOT_URL)
-      .then(response => {
-        this.setState({celebrities: response.data})
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    .then(response => {
+      this.setState({celebrities: response.data})
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   renderCelebs () {
@@ -39,7 +43,7 @@ class App extends Component {
     )
   }
 
-  render() {
+  render () {
     return (
       <div className="App">
         <div className="App-header">
@@ -48,11 +52,13 @@ class App extends Component {
         </div>
         <div className="App-intro">
           <p>This site is using the twitter API to load information for ten celebrities.</p>
+          <p>Code source for the front end is located <a href='https://github.com/gp3gp3gp3/fb-twitter-celebrities-list'>here</a>.</p>
+          <p>Code source for the back end is located <a href='https://github.com/gp3gp3gp3/Sinatra-Oauth-backend'>here</a>.</p>
           {this.renderCelebs()}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

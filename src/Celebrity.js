@@ -1,25 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Celebrity extends Component {
-  render () {
-    const {
-      user_name,
-      full_name,
-      followers_count,
-      friends_count,
-      profile_image_url
-    } = this.props
+ export default (props) => {
+  const {
+    user_name,
+    full_name,
+    followers_count,
+    friends_count,
+    profile_image_url
+  } = props
 
-    return (
-      <div>
-        <img alt={full_name} src={profile_image_url} />
-        <p>Twitter Name: {user_name}</p>
-        <p>Full Name: {full_name}</p>
-        <p>Twitter Follower: {followers_count}</p>
-        <p>Twitter Friends: {friends_count}</p>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <img alt={full_name} src={profile_image_url} />
+      <h1>{full_name}</h1>
+      <h3>@{user_name}</h3>
+      <p>Twitter Follower: {followers_count}</p>
+      <p>Twitter Friends: {friends_count}</p>
+    </div>
+  )
 }
-
-export default Celebrity
