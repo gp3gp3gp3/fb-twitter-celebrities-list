@@ -51,7 +51,7 @@ class App extends Component {
           <h2>Celebrity List</h2>
         </div>
         <div className="App-intro">
-          <p>This site is using the twitter API to load information for ten celebrities.</p>
+          <p>This site is using the <a href='https://dev.twitter.com/docs'>Twitter</a> and <a href='https://developers.facebook.com/docs/graph-api'>Facebook</a> APIs to load information for ten celebrities.</p>
           <p>Code source for the front end is located <a href='https://github.com/gp3gp3gp3/fb-twitter-celebrities-list'>here</a>.</p>
           <p>Code source for the back end is located <a href='https://github.com/gp3gp3gp3/Sinatra-Oauth-backend'>here</a>.</p>
           {this.renderCelebs()}
