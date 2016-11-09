@@ -6,6 +6,7 @@ import React from 'react'
     full_name,
     followers_count,
     friends_count,
+    fb_likes,
     profile_image_url
   } = props
 
@@ -16,6 +17,7 @@ import React from 'react'
       <h3>@{user_name}</h3>
       <p>Twitter Follower: {followers_count}</p>
       <p>Twitter Friends: {friends_count}</p>
+      <p>Facebook Likes: {fb_likes}</p>
     </div>
   )
 }
