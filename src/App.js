@@ -19,7 +19,7 @@ class App extends Component {
   fetchUsers () {
     const ROOT_URL = process.env.NODE_ENV === 'development'
     ? 'http://localhost:4567'
-    : 'http://sinatra-oauth-backend.herokuapp.com'
+    : 'https://sinatra-oauth-backend.herokuapp.com'
 
     axios.get(ROOT_URL)
     .then(response => {
