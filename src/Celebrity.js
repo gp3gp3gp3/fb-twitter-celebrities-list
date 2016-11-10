@@ -1,6 +1,6 @@
 import React from 'react'
 
- export default (props) => {
+export default (props) => {
   const {
     user_name,
     full_name,

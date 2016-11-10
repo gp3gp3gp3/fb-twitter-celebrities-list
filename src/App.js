@@ -26,14 +26,14 @@ class App extends Component {
       this.setState({celebrities: response.data})
     })
     .catch(err => {
-      console.log(err)
+      console.error(err)
     })
   }
 
   renderCelebs () {
     const { celebrities } = this.state
     if (!celebrities) {
-      return <div>Loading...</div>
+      return <h2>Loading...</h2>
     }
     return celebrities.map((celeb, i) =>
       <Celebrity
@@ -45,15 +45,15 @@ class App extends Component {
 
   render () {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className='App'>
+        <div className='App-header'>
+          <img src={logo} className='App-logo' alt='logo' />
           <h2>Celebrity List</h2>
         </div>
-        <div className="App-intro">
+        <div className='App-intro'>
           <p>This site is using the <a href='https://dev.twitter.com/docs'>Twitter</a> and <a href='https://developers.facebook.com/docs/graph-api'>Facebook</a> APIs to load information for ten celebrities.</p>
-          <p>Source code for the front end is located <a href='https://github.com/gp3gp3gp3/fb-twitter-celebrities-list'>here</a>.</p>
-          <p>Source code for the back end is located <a href='https://github.com/gp3gp3gp3/Sinatra-Oauth-backend'>here</a>.</p>
+          <p>Source code for the front end is located <a href='https://github.com/gp3gp3gp3/fb-twitter-celebrities-list'>here</a></p>
+          <p>Source code for the back end is located <a href='https://github.com/gp3gp3gp3/Sinatra-Oauth-backend'>here</a></p>
           {this.renderCelebs()}
         </div>
       </div>
