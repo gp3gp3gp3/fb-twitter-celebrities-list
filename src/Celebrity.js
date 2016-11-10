@@ -1,4 +1,5 @@
 import React from 'react'
+import './Celebrity.css'
 
 export default (props) => {
   const {
@@ -11,8 +12,8 @@ export default (props) => {
   } = props
 
   return (
-    <div>
-      <img alt={full_name} src={profile_image_url} />
+    <div className='celebrity'>
+      <img className='celebrityImg' alt={full_name} src={profile_image_url} />
       <h1>{full_name}</h1>
       <h3>@{user_name}</h3>
       <p>Twitter Follower: {followers_count}</p>
